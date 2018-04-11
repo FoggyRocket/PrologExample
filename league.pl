@@ -40,28 +40,26 @@ campeon('No tengo a ningun campeon con esa descripción').
 
 garen :-
 	es_luchador,
-	pregunta('¿Tiene una gran espepada?'),
+	pregunta('¿Tiene una gran espada?'),
 	pregunta('¿Grita por demacia?'),
 	pregunta('¿Se encuentra en demacia?'),
 	pregunta('¿Utiliza un amadura anti-magia?'),
-	pregunta('¿Forma parte de la familia guardiana?'),
 	pregunta('¿Tiene cabello corto?'),
 	pregunta('¿Es un gran guerrero?').
 tryndamere :-
 	es_luchador,
-	pregunta('¿Tiene una gran espepada?'),
+	pregunta('¿Tiene una gran espada?'),
 	pregunta('¿Su brazo derecho es mas fuerte que el izquierdo?'),
 	pregunta('¿Se encuentra en feljord?'),
 	pregunta('¿Tiene el cabello negro y largo?'),
 	pregunta('¿Es un rey?').
 vi :-
 	es_luchador,
+	es_mujer,
 	pregunta('¿Tiene guantes mejorados?'),
 	pregunta('¿Su frace es vi de victoria?'),
 	pregunta('¿Tiene el cabello color rosa?'),
 	pregunta('¿Es una increible policia?'),
-  pregunta('¿Se encuentra en Piltover?'),
-	pregunta('¿Su nemesis es la bandida Jinx?').
 khazix :-
   es_asesino,
   pregunta('¿Especializado en matar?'),
@@ -78,6 +76,7 @@ kayn :-
   pregunta('¿Su cuerpo esta siendo poseido?').
 katarina :-
   es_asesino,
+	es_mujer,
   pregunta('¿Especializado en matar?'),
   pregunta('¿Utiliza una dagas?'),
   pregunta('¿Tiene una cicatriz en su ojo izquierdo?'),
@@ -89,7 +88,6 @@ karthus :-
   pregunta('¿Parece a la muerte?'),
   pregunta('¿Es un ser inmortal?'),
   pregunta('¿Utiliza una tunica roja?'),
-  pregunta('¿Es un hechizero de gran poder?').
 twisted :-
   es_mago,
   pregunta('¿Utiliza cartas?'),
@@ -98,9 +96,9 @@ twisted :-
   pregunta('¿Cree en la fortuna?').
 lux :-
   es_mago,
-  pregunta('¿Es rubia?'),
+  es_mujer,
   pregunta('¿Es de Demacia?'),
-  pregunta('¿Pertenece ala familia guardiana?'),
+  pregunta('¿Pertenece a la familia guardiana?'),
   pregunta('¿Es familiar de Garen?'),
   pregunta('¿Libera un gran arcorisis como ataque?').
 swain :-
@@ -108,7 +106,6 @@ swain :-
   pregunta('¿Es un gran general?'),
   pregunta('¿Perdio su brazo?'),
   pregunta('¿Pose un cuervo por mascota?'),
-  pregunta('¿Es rubio?'),
   pregunta('¿Tiene un demonio en su interior?').
 ekko :-
   es_mago,
@@ -119,28 +116,28 @@ ekko :-
   pregunta('¿Vive en Zaun?').
 kaisa :-
   es_tirador,
-  pregunta('¿Es mujer?'),
+  es_mujer,
   pregunta('¿Tiene un traje simbiotico?'),
   pregunta('¿Proviene del vacio?'),
   pregunta('¿Tiene el cabello largo y oscuro?'),
   pregunta('¿es una gran guerrera?').
 miss :-
   es_tirador,
-  pregunta('¿Es mujer?'),
+  es_mujer,
   pregunta('¿Vaiaja en un barco?'),
   pregunta('¿Es una especie de pirtata?'),
   pregunta('¿Tiene el cabello largo y rojiso?'),
   pregunta('¿Utiliza dos pistolas con las que mataron a sus padres?').
 ashe :-
   es_tirador,
-  pregunta('¿Es mujer?'),
+  es_mujer,
   pregunta('¿Utiliza un arco?'),
   pregunta('¿Es reyna de feljord?'),
   pregunta('¿Tiene el cabello largo y blanco?'),
   pregunta('¿es una gran cazadora?').
 caitlyn :-
   es_tirador,
-  pregunta('¿Es mujer?'),
+  es_mujer,
   pregunta('¿Tiene un arma de francotirador?'),
   pregunta('¿Su nemesis es la bandida Jinx?'),
   pregunta('¿Tiene el cabello largo y oscuro?'),
@@ -168,8 +165,8 @@ taric :-
   pregunta('¿Su cabello es largo?').
 leona :-
   es_soporte,
+	es_mujer,
   pregunta('¿Es del Monte Targon?'),
-  pregunta('¿Es una gran guerrera?'),
   pregunta('¿Utiliza una espada y escudo?'),
   pregunta('¿Su simbolo es el sol?'),
   pregunta('¿Suu cabello es largo y castaño?').
@@ -184,6 +181,7 @@ thresh :-
 %desconocido :- se_desconoce_campeon.
 
 es_luchador:- pregunta("¿Pelea cuerpo a cuerpo?"),!.
+es_mujer:- pregunta("¿Es un mujer?")
 es_asesino:- pregunta("¿Es especializado en ocultarse y matar?"),!.
 es_mago:- pregunta("¿Utiliza magia?"),!.
 es_tirador:- pregunta("¿Se especializa en ataques a distancia?"),!.
