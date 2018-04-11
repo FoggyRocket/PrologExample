@@ -59,7 +59,7 @@ vi :-
 	pregunta('¿Tiene guantes mejorados?'),
 	pregunta('¿Su frace es vi de victoria?'),
 	pregunta('¿Tiene el cabello color rosa?'),
-	pregunta('¿Es una increible policia?'),
+	pregunta('¿Es una increible policia?').
 khazix :-
   es_asesino,
   pregunta('¿Especializado en matar?'),
@@ -87,7 +87,7 @@ karthus :-
   pregunta('¿Es una especie de espectro?'),
   pregunta('¿Parece a la muerte?'),
   pregunta('¿Es un ser inmortal?'),
-  pregunta('¿Utiliza una tunica roja?'),
+  pregunta('¿Utiliza una tunica roja?').
 twisted :-
   es_mago,
   pregunta('¿Utiliza cartas?'),
@@ -181,7 +181,7 @@ thresh :-
 %desconocido :- se_desconoce_campeon.
 
 es_luchador:- pregunta("¿Pelea cuerpo a cuerpo?"),!.
-es_mujer:- pregunta("¿Es un mujer?")
+es_mujer:- pregunta("¿Es un mujer?"),!.
 es_asesino:- pregunta("¿Es especializado en ocultarse y matar?"),!.
 es_mago:- pregunta("¿Utiliza magia?"),!.
 es_tirador:- pregunta("¿Se especializa en ataques a distancia?"),!.
